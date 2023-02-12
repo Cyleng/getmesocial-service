@@ -1,56 +1,43 @@
 package com.example.getmesocialservice.model;
 
+import org.springframework.data.annotation.Id;
+
 public class User {
 
-    private int userId;
+    @Id
+    private String id;
     private String name;
-    private String address;
-    private int age;
+    private String email;
     private String profilePicUrl;
 
-    public User(String name, String address, int age) {
+    public User(String name, String email, String profilePicUrl) {
         this.name = name;
-        this.address = address;
-        this.age = age;
+        this.email = email;
+        this.profilePicUrl = profilePicUrl;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getAddress() {
-        return address;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getProfilePicUrl() {
         return profilePicUrl;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public void setProfilePicUrl(String profilePicUrl) {
         this.profilePicUrl = profilePicUrl;
     }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
 }
+

@@ -4,33 +4,33 @@ import org.springframework.data.annotation.Id;
 
 import java.util.Date;
 
-public class Album {
+public class Photo {
     @Id
     private String id;
-    private String name;
-    private String coverPhotoUrl;
+    private String albumId;
+    private String photoUrl;
     private String createdBy;
     private Date dateCreated;
 
-    public Album(String name, String coverPhotoUrl) {
-        this.name = name;
-        this.coverPhotoUrl = coverPhotoUrl;
+    public Photo(String albumId, String photoUrl) {
+        this.albumId = albumId;
+        this.photoUrl = photoUrl;
     }
 
-    public String getName() {
-        return name;
+    public String getAlbumId() {
+        return albumId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAlbumId(String albumId) {
+        this.albumId = albumId;
     }
 
-    public String getCoverPhotoUrl() {
-        return coverPhotoUrl;
+    public String getPhotoUrl() {
+        return photoUrl;
     }
 
-    public void setCoverPhotoUrl(String coverPhotoUrl) {
-        this.coverPhotoUrl = coverPhotoUrl;
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
     }
 
     public String getCreatedBy() {
